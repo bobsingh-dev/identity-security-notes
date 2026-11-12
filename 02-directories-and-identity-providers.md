@@ -4,6 +4,7 @@
 > authenticates users and supplies trusted identity information
 > to applications.
 
+
 ## 🗂️ Core Concepts
 
 | Concept | Purpose | Example |
@@ -13,6 +14,7 @@
 | **Application** | Uses identity information and enforces access decisions. | A FastAPI application |
 
 A product can provide both directory and identity-provider capabilities.
+
 
 ## 🔌 LDAP
 
@@ -28,6 +30,7 @@ Common operations include:
 
 A directory server implements LDAP.
 
+
 ## 🏢 Active Directory
 
 **Active Directory Domain Services (AD DS)** is Microsoft’s
@@ -41,6 +44,7 @@ It manages:
 - Centralized configuration through Group Policy.
 
 Applications can query Active Directory through LDAP.
+
 
 ## ☁️ Microsoft Entra ID
 
@@ -59,6 +63,7 @@ It supports:
 AD DS and Entra ID have different architectures and capabilities.
 Organizations can integrate them for hybrid identity.
 
+
 ## 🔐 Keycloak
 
 **Keycloak** is an open-source identity and access management platform.
@@ -76,6 +81,7 @@ It provides:
 | **Realm** | An isolated collection of users, clients, roles, and authentication configuration. |
 | **Client** | An application or service registered with Keycloak. |
 
+
 ## 🟦 Okta
 
 **Okta** is a managed identity platform.
@@ -91,6 +97,7 @@ It provides capabilities for:
 Organizations commonly use it to manage employee access
 across applications.
 
+
 ## 🔄 How They Connect
 
 An organization might use the following arrangement:
@@ -102,6 +109,7 @@ An organization might use the following arrangement:
 | **Application** | Accept trusted identity information and enforce permissions |
 
 An identity provider can also maintain users in its own identity store.
+
 
 ## 🚪 Single Sign-On
 
@@ -116,6 +124,7 @@ Each application still needs to determine what the user may access.
 | **Authentication** | Who is this user? |
 | **Authorization** | What may this user do? |
 | **Provisioning** | Does this user have an account in this application? |
+
 
 ## ♻️ Provisioning and Deprovisioning
 
@@ -135,6 +144,7 @@ across systems, including creating, updating, and deactivating users.
 Disabling an account also requires considering existing
 application sessions and previously issued tokens.
 
+
 ## 🔎 Common Failures
 
 | Failure | Effect |
@@ -144,6 +154,7 @@ application sessions and previously issued tokens.
 | **Incomplete deprovisioning** | Former users retain application access. |
 | **Incorrect federation configuration** | Login fails or identity information is rejected. |
 | **Active sessions remain** | Access can continue after an account is disabled. |
+
 
 ## 🧠 Main Takeaways
 
